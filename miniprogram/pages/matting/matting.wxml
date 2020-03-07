@@ -1,0 +1,60 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">Portrait Matting</view>
+</cu-custom>
+
+<!-- <view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-blue '></text> 人像遮罩
+  </view>
+</view> -->
+
+<view class="cu-card case no-card">
+  <view class="cu-item shadow ">
+    <view class="image">
+      <image src="{{mergerUrl}}" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">Matting Result</view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-blue '></text> 选择图片
+  </view>
+</view>
+<view class="bg-white padding">
+  <view class="grid col-4 grid-square switch-portrait">
+    <view bindtap="ChooseImageP" class="bg-gray bg-img2 {{choosePortrait==0?'active':''}}" style="background-image:url({{inputUrl}});">
+      <text class="cuIcon-camerafill"></text>
+      <view class="upload-test padding">上传图片</view>
+    </view>
+    <view wx:for="{{portraitDemoList}}" wx:key class="bg-img {{choosePortrait==item.id?'active':''}}" bindtap="selectedPortrait" data-id="{{item.id}}" style="background-image:url({{item.url}});"></view>
+  </view>
+  <view class="flex" style="text-align: center;">
+    <view class="flex-sub padding-sm margin-xs">肖像图</view>
+    <view class="flex-sub padding-sm margin-xs text-gray">示例图一</view>
+    <view class="flex-sub padding-sm margin-xs text-gray">示例图二</view>
+    <view class="flex-sub padding-sm margin-xs text-gray">示例图三</view>
+  </view>
+</view>
+
+<view class="bg-white padding">
+  <view class="grid col-4 grid-square switch-bg">
+    <view bindtap="ChooseImageB" class="bg-gray bg-img2 {{chooseBg==0?'active':''}}" style="background-image:url({{bgUrl}});">
+      <text class="cuIcon-camerafill"></text>
+      <view class="upload-test padding">上传图片</view>
+    </view>
+    <view wx:for="{{bgDemoList}}" wx:key class="bg-img {{chooseBg==item.id?'active':''}}" bindtap="selectBg" data-id="{{item.id}}" style="background-image:url({{item.url}});"></view>
+  </view>
+  <view class="flex" style="text-align: center;">
+    <view class="flex-sub padding-sm margin-xs">背景图</view>
+    <view class="flex-sub padding-sm margin-xs text-gray">示例图一</view>
+    <view class="flex-sub padding-sm margin-xs text-gray">示例图二</view>
+    <view class="flex-sub padding-sm margin-xs text-gray">示例图三</view>
+  </view>
+</view>
+
+<view class="ColorUi center padding">
+  <button class="cu-btn block bg-blue margin-tb-sm lg" bindtap="beginMatting"> Matting </button>
+</view>

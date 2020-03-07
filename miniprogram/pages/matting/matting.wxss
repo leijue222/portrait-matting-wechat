@@ -1,0 +1,25 @@
+.upload {
+  height: 110px;
+}
+.bg-img2{
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.upload-test {
+  position: absolute;
+  bottom: -7px;
+  font-size: 22rpx;
+}
+.padding-sm {
+  padding: 0 20rpx;
+}
+.margin-xs{
+  margin:  0 10rpx;
+}
+.switch-portrait .active{
+  border: 2rpx solid #39b54a;
+}
+.switch-bg .active{
+  border: 2rpx solid #ff9700;
+}
