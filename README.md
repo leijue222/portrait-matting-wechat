@@ -35,6 +35,7 @@ module.exports = url;
 ## Thanks
 
 The birth of this project is inseparable from the following projects:
+
  **[ColorUI](https://github.com/weilanwl/ColorUI)：Vibrant, high-saturation colors, a small program component library focused on vision**
 
 ---
