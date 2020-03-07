@@ -1,0 +1,34 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">Semantic Segmentation</view>
+</cu-custom>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-blue'></text> 语义分割
+  </view>
+</view>
+<view class="cu-card case no-card flex">
+  <view class="cu-item shadow flex-sub padding-bottom">
+    <view class="image">
+      <image src="{{inputUrl}}" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">input</view>
+    </view>
+  </view>
+  
+  <view class="cu-item shadow flex-sub padding-bottom">
+    <view class="image">
+      <image src="{{maskUrl}}" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">target mask</view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <image src='/images/logo.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>加载中...</view>
+</view> -->
+
+<view class="ColorUi center padding">
+  <button class="cu-btn block bg-blue margin-tb-sm lg" bindtap="ChooseImage"> 上传图片 </button>
+</view>
