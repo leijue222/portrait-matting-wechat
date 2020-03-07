@@ -1,4 +1,4 @@
-var api = 'http://101.200.63.214/api';      //正式版本
+var api = 'http://x.x.x.x/api';      //正式版本
 // var api = "http://127.0.0.1:5000/api";      // 本地测试
 
 var url = {
