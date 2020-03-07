@@ -16,7 +16,7 @@ Before you start, please confirm that there are no problems with the API service
 
 
 ## Run
-Modify the `` /miniprogram/utils/api.js '' file based on your needs
+Modify the ``/miniprogram/utils/api.js`` file based on your needs
 
 ```
 var api = 'http://xxx.xx.xx.xxx/api';          // server address
